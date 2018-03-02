@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javafx Web Print</title>
+    <meta charset="utf-8">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .content {
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .box {
+            display: block;
+            position: relative;
+            margin: 4px 0 0 0;
+            padding: 0;
+            border: 2px solid;
+            width: 175px;
+            height: 310px;
+        }
+
+        .box div {
+            font-size:1px;
+            position: absolute;
+            font-family: "SimSu", Times, serif;
+        }
+        /* 生产批号*/
+        .sc_lot {
+            top: 3px;
+            left: 1px;
+        }
+        /*投片版型*/
+        .tp_model {
+            top: 18px;
+            left: 1px;  
+        }
+        /*出库日期*/
+        .out_date {
+            top: 33px;
+            left: 1px;  
+        }
+        /*装片数*/
+        .out_qty {
+            top: 33px;
+            left: 115px;  
+        }
+        /*应生产时间*/
+        .pro_time {
+            top: 48px;
+            left: 1px;
+        }
+        /*备注*/
+        .re_marks {
+            top: 63px;
+            left: 1px;
+        }
+        /*盒位 炉次片号*/
+        .box_lcid {
+            top: 78px;
+            left: 1px; 
+        }
+
+        #qrcode {
+            margin-left: 100px;
+        }
+
+        #bccode {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!-- <div id="name"></div>
+        <div id="adress"></div>
+        <div id="qrcode"></div>
+        <div id="bccode"></div> -->
+        <div class="box">
+            <div class="sc_lot">
+                生产批号:WSKZB1028G1710202
+            </div>
+            <div class="tp_model">
+                投片版型:B1028G
+            </div>
+            <div class="out_date"">
+                出库日期:2017-01-02
+            </div>
+            <div class="out_qty"">
+                装片数:25
+            </div>
+            <div class="pro_time"">
+                应产出时间:2017-01-05
+            </div>
+            <div class="re_marks"">
+                备注:投合肥
+            </div>
+            <div class="box_lcid"">
+                盒位  炉次片号
+            </div>
+        </div>
+    </div>
+</body>
+<script src="jquery.min.js"></script>
+<script src="jquery.qrcode.min.js"></script>
+<script src="jquery-barcode-2.0.1.js"></script>
+<script>
+    $(function () {
+        // $("#name").text("Water ID : 01234567890123456789");
+        // $("#adress").text("Address ID : 01234567890123456789");
+        // $('#qrcode').qrcode({
+        //     width: 64,
+        //     height: 64,
+        //     text: "size doesn't matter"
+        // });
+        // $('#bccode').barcode("1234567890128", "code128", {
+        //     barHeight: "20"
+        // });
+    })
+</script>
+
+</html>
