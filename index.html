@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javafx Web Print</title>
+    <meta charset="utf-8">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .content {
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .box {
+            display: block;
+            position: relative;
+            margin: 4px 0 0 0;
+            padding: 0;
+            border: 2px solid;
+            width: 224px;
+            height: 146px;
+        }
+
+        .box>div {
+            font-size: 10px;
+            position: absolute;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .corner {
+            width: 20px;
+            height: 20px;
+        }
+
+        #qrcode {
+            margin-left: 100px;
+        }
+
+        #bccode {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!-- <div id="name"></div>
+        <div id="adress"></div>
+        <div id="qrcode"></div>
+        <div id="bccode"></div> -->
+        <div class="box">
+            <div class="corner">
+                壹
+            </div>
+            <div class="corner" style="left:170px;">
+                贰
+            </div>
+            <div class="corner" style="left:170px;top:130px;">
+                叁
+            </div>
+            <div class="corner" style="top:130px;">
+                肆
+            </div>
+        </div>
+    </div>
+</body>
+<script src="jquery.min.js"></script>
+<script src="jquery.qrcode.min.js"></script>
+<script src="jquery-barcode-2.0.1.js"></script>
+<script>
+    $(function () {
+        // $("#name").text("Water ID : 01234567890123456789");
+        // $("#adress").text("Address ID : 01234567890123456789");
+        // $('#qrcode').qrcode({
+        //     width: 64,
+        //     height: 64,
+        //     text: "size doesn't matter"
+        // });
+        // $('#bccode').barcode("1234567890128", "code128", {
+        //     barHeight: "20"
+        // });
+    })
+</script>
+
+</html>
